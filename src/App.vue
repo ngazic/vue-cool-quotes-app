@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <hello-world msg="Welcome to Your Vue.js App" />
+    <quote-header></quote-header>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+import quoteHeader from "./components/shared/header.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    quoteHeader
   }
 };
 </script>
