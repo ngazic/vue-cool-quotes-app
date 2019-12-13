@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <b-button>click me</b-button>
+    <h1>{{ value }}</h1>
+    <b-button @click="addQuote">++</b-button>
+    <b-button @click="removeQuote">--</b-button>
   </div>
 </template>
 
@@ -10,7 +11,24 @@ export default {
   props: {
     msg: String
   },
-  methods: {}
+computed: {
+    value() {
+      // return this.$store.state.value;
+      return this.$store.getters.getCounterValue;
+    }
+  },
+  methods: {
+    addQuote() {
+      if (this.$store.state.value < 10) {
+        this.$store.state.value++;
+      }
+    },
+    removeQuote() {
+      if (this.$store.state.value > 0) {
+        this.$store.state.value--;
+      }
+    }
+  }
 };
 </script>
 

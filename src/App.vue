@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <quote-header></quote-header>
+    <hello-world></hello-world>
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld from "./components/HelloWorld.vue";
 import quoteHeader from "./components/shared/header.vue";
 
 export default {
   name: "app",
   components: {
-    quoteHeader
+    quoteHeader,
+    HelloWorld
   }
 };
 </script>

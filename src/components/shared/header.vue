@@ -4,9 +4,9 @@
       <b-row>
         <b-col cols="12" md="8">
           <b-progress
-            :value="value"
+            :value="getCounterValue"
             variant="success"
-            :max="max"
+            :max="maxCounterValue"
             striped
             animated
             show-value
@@ -14,39 +14,35 @@
           ></b-progress>
         </b-col>
         <b-col cols="12" md="4">
-          <h3>Quotes added : {{ value }}</h3>
+          <h3>Quotes added : {{ getCounterValue }}</h3>
         </b-col>
       </b-row>
     </b-container>
     <b-button variant="success" @click="addQuote">increase</b-button>
-    <b-button variant="danger" @click="removeQuote">decreasse</b-button>
+    <b-button variant="danger" @click="removeQuote(3)">decreasse</b-button>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import { mapActions } from 'vuex';
 export default {
   data() {
     return {
       // value: 0,
-      max: 10
     };
   },
   computed: {
-    value() {
-      return this.$store.state.value;
-    }
+   ...mapGetters([
+     'getCounterValue',
+     'maxCounterValue'
+   ])
   },
   methods: {
-    addQuote() {
-      if (this.$store.state.value < 10) {
-        this.$store.state.value++;
-      }
-    },
-    removeQuote() {
-      if (this.$store.state.value > 0) {
-        this.$store.state.value--;
-      }
-    }
+    ...mapActions({
+      addQuote: 'incrementCounter',
+      removeQuote: 'decrementCounter'
+    })
   }
 };
 </script>
