@@ -1,0 +1,12 @@
+/* eslint-disable prettier/prettier */
+//Getters
+export const GET_COUNTER_VALUE = "shared/GET_COUNTER_VALUE";
+export const GET_MAX_COUNTER_VALUE = "shared/GET_MAX_COUNTER_VALUE";
+
+//Mutations
+export const MUTATE_INCREASE_COUNTER_VALUE = "shared/MUTATE_INCREASE_COUNTER_VALUE";
+export const MUTATE_DECREASE_COUNTER_VALUE = "shared/MUTATE_DECREASE_COUNTER_VALUE";
+
+//Actions
+export const ACTION_INCREASE_COUNTER_VALUE = "shared/ACTION_INCREASE_COUNTER_VALUE";
+export const ACTION_DECREASE_COUNTER_VALUE = "shared/ACTION_DECREASE_COUNTER_VALUE";

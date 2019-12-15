@@ -26,6 +26,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import { mapActions } from 'vuex';
+import * as types from "../../store/types";
 export default {
   data() {
     return {
@@ -33,15 +34,15 @@ export default {
     };
   },
   computed: {
-   ...mapGetters([
-     'getCounterValue',
-     'maxCounterValue'
-   ])
+   ...mapGetters({
+     getCounterValue: types.GET_COUNTER_VALUE,
+     maxCounterValue: types.GET_MAX_COUNTER_VALUE
+   })
   },
   methods: {
     ...mapActions({
-      addQuote: 'incrementCounter',
-      removeQuote: 'decrementCounter'
+      addQuote: types.ACTION_INCREASE_COUNTER_VALUE,
+      removeQuote: types.ACTION_DECREASE_COUNTER_VALUE
     })
   }
 };
