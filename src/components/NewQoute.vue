@@ -6,6 +6,7 @@
       placeholder="Add new qoute"
       :state="text.length >= 3"
       v-model="text"
+      :disabled="counter >=10"
       rows="3"
       max-rows="8"
       ></b-form-textarea>
@@ -13,7 +14,7 @@
       <b-col sm="4" md="3" lg="3">
       <label for="textarea-auto-height">Save or remove qoute :</label>
       <hr>  
-        <b-button variant="success" :disabled="counter >=10" @click="addNewQoute">ADD</b-button>
+        <b-button variant="success" :disabled="counter >=10 || text.length <3" @click="addNewQoute">ADD</b-button>
         <b-button variant="danger"  @click="clear">CLEAR</b-button>
       </b-col>
     </b-row>
@@ -49,7 +50,7 @@ export default {
       //eslint-disable-next-line no-console
       console.log(this);
       this.addQoute({id: iD, text: this.text});
-      this.$data.text = "you saved it georgeinn ";
+      this.$data.text = "";
     },
     clear: function() {
       this.text = '';
