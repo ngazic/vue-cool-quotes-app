@@ -18,14 +18,11 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-button variant="success" @click="addQuote">increase</b-button>
-    <b-button variant="danger" @click="removeQuote(3)">decreasse</b-button>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import { mapActions } from 'vuex';
 import * as types from "../../store/types";
 export default {
   data() {
@@ -38,12 +35,6 @@ export default {
      getCounterValue: types.GET_COUNTER_VALUE,
      maxCounterValue: types.GET_MAX_COUNTER_VALUE
    })
-  },
-  methods: {
-    ...mapActions({
-      addQuote: types.ACTION_INCREASE_COUNTER_VALUE,
-      removeQuote: types.ACTION_DECREASE_COUNTER_VALUE
-    })
   }
 };
 </script>

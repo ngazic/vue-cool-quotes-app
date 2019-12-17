@@ -1,19 +1,22 @@
 <template>
   <div id="app">
     <quote-header></quote-header>
-    <hello-world></hello-world>
+    <div class="title">
+      <h2>Add new qoute:</h2>
+    </div>
+    <new-qoute></new-qoute>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import quoteHeader from "./components/shared/header.vue";
+import NewQoute from "./components/NewQoute";
 
 export default {
   name: "app",
   components: {
     quoteHeader,
-    HelloWorld
+    NewQoute
   }
 };
 </script>
@@ -26,5 +29,17 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  .title {
+    padding: 15px;
+    margin:1rem;
+    font-family: "coolFont";
+  }
+
+}
+  @font-face {
+  font-family: coolFont;
+  src: url(./assets/fonts/Amsterdam-VwYy.ttf);
+  font-weight: bold;
 }
 </style>

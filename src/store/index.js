@@ -9,7 +9,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     value: 0,
-    max: 10
+    max: 10,
+    qoutes: []
   },
   mutations,
   actions,

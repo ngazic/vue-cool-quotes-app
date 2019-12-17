@@ -13,6 +13,10 @@ export default {
     if (state.value - val >= 0) {
       state.value -= val;
     }
+  },
+  [types.MUTATE_ADD_QUOTE]: function (state,quote) {
+    // console.log('this is the mutation add qooute ');
+    state.qoutes.push(quote);
   }
 
 }

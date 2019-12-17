@@ -7,5 +7,8 @@ export default {
   },
   [types.ACTION_INCREASE_COUNTER_VALUE]: ({ commit }, incrementBy) => {
     commit(types.MUTATE_INCREASE_COUNTER_VALUE, incrementBy);
+  },
+  [types.ACTION_ADD_QUOTE]: ({ commit }, quote) => {
+    commit(types.MUTATE_ADD_QUOTE, quote);
   }
 };
