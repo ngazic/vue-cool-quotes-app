@@ -5,18 +5,21 @@
       <h2>Add new qoute:</h2>
     </div>
     <new-qoute></new-qoute>
+    <all-qoutes></all-qoutes>
   </div>
 </template>
 
 <script>
 import quoteHeader from "./components/shared/header.vue";
 import NewQoute from "./components/NewQoute";
+import AllQoutes from "./components/AllQoutes";
 
 export default {
   name: "app",
   components: {
     quoteHeader,
-    NewQoute
+    NewQoute,
+    AllQoutes
   }
 };
 </script>

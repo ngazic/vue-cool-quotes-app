@@ -2,6 +2,7 @@
 //Getters
 export const GET_COUNTER_VALUE = "shared/GET_COUNTER_VALUE";
 export const GET_MAX_COUNTER_VALUE = "shared/GET_MAX_COUNTER_VALUE";
+export const GET_QUOTES = "shared/GET_QOUTES";
 
 //Mutations
 export const MUTATE_INCREASE_COUNTER_VALUE = "shared/MUTATE_INCREASE_COUNTER_VALUE";

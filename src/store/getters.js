@@ -6,5 +6,8 @@ export default {
   },
   [types.GET_MAX_COUNTER_VALUE]: state => {
     return state.max;
+  },
+  [types.GET_QUOTES]: state => {
+    return state.quotes;
   }
 };

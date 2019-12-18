@@ -16,7 +16,7 @@ export default {
   },
   [types.MUTATE_ADD_QUOTE]: function (state,quote) {
     // console.log('this is the mutation add qooute ');
-    state.qoutes.push(quote);
+    state.quotes.push(quote);
   }
 
 }
